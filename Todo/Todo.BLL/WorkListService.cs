@@ -42,15 +42,39 @@ namespace Todo.BLL
         {
             using (var context = _dbContextFactory.Create())
             {
-                var workList = context.WorkLists
-                        .Where(w => w.Id == id)
-                        .Single();
+                //var workList = context.WorkLists
+                //        .Where(w => w.Id == id)
+                //        .Single();
 
-                return new WorkListModel
-                {
-                    Id = workList.Id,
-                    Title = workList.Title
-                };        
+                //return new WorkListModel
+                //{
+                //    Id = workList.Id,
+                //    Title = workList.Title
+                //};        
+                var workListModel = context.WorkLists
+                        .Where(t => t.Id == id)
+                        .ToList()
+                        .Select((workList) => {
+                            return new WorkListModel
+                            {
+                                Id = workList.Id,
+                                Title = workList.Title,
+                                Works = workList.Works
+                                        .Select((work) =>
+                                {
+                                    return new WorkItemModel
+                                    {
+                                        Id = work.Id,
+                                        Title = work.Title,
+                                        Completed = work.IsCompleted
+                                    };
+                                })
+                                .ToList()
+                            };
+                        })
+                        .FirstOrDefault();
+
+                return workListModel;
             }
         }
 

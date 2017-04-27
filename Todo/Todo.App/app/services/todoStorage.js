@@ -63,10 +63,17 @@ angular.module('todomvc')
             },
 
             get: function (id) {
-                return store.listApi.get({ id: id }, function (resp) {
-                    angular.copy(resp, store.todoList);
-                }, function (error) {
+
+                return store.listApi.get({ id: id },
+
+                    function (resp) {
+                        angular.copy(resp, store.todoList);
+                    },
+
+                    function (error) {
+                        var x;
                     })
+
                     .$promise;
             },
 

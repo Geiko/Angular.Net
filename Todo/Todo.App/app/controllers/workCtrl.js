@@ -111,11 +111,13 @@
                     work.completed = completed;
                 }
 
-                store.put(work, workList.works.indexOf(tworkodo))
-                    .then(function success() {
-                    }, function error() {
-                        work.completed = !work.completed;
-                    });
+                store.put(work)
+                    .then((response) => {
+                    console.log(response);
+                }).catch((error) => {
+                    work.completed = !work.completed;
+                    console.log(error);
+                });
             };
 
             $scope.clearCompletedWorks = function () {

@@ -47,7 +47,7 @@ namespace Todo.BLL
                 var work = context.Works.Where(w => w.Id == workModel.Id)
                                         .FirstOrDefault();
                 work.Title = workModel.Title;
-                work.IsCompleted = workModel.IsCompleted;
+                work.IsCompleted = workModel.Completed;
                 context.SaveChanges();
                 return workModel;
             }

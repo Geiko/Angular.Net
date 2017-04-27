@@ -64,17 +64,17 @@ angular.module('todomvc')
 
             get: function (id) {
 
-                var x1 = function (resp) {
-                    angular.copy(resp, store.workList);
-                };
-
                 return store.listApi.get({ id: id },
+                    
+                    function (resp) {
+                        angular.copy(resp, store.workList);
+                    },
 
-                   x1,
                     function (error) {
                         var x;
                     })
-                .$promise;
+
+                    .$promise;
             },
 
             insert: function (work) {

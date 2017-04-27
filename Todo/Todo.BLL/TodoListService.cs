@@ -35,7 +35,10 @@ namespace Todo.BLL
         {
             using (var context = _dbContextFactory.Create())
             {
-                var todoListModel = context.TodoLists.Where(t => t.Id == id).ToList().Select((todoList) => {
+                var todoListModel = context.TodoLists
+                        .Where(t => t.Id == id)
+                        .ToList()
+                        .Select((todoList) => {
                     return new TodoListModel
                     {
                         Id = todoList.Id,
@@ -48,9 +51,12 @@ namespace Todo.BLL
                                 Title = todo.Title,
                                 Completed = todo.Completed
                             };
-                        }).ToList()
+                        })
+                        .ToList()
                     };
-                }).FirstOrDefault();
+                })
+                .FirstOrDefault();
+
                return todoListModel;
             }
         }
