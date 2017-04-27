@@ -34,7 +34,7 @@ angular.module('todomvc')
                 .finally(function () {
                     $scope.saving = false;
                 });
-        };////////////////////////////////////////////////
+        };
 
         $scope.editTodoList = function (todoList) {
             $scope.editedTodoList = todoList;
@@ -73,7 +73,7 @@ angular.module('todomvc')
                 .finally(function () {
                     $scope.editedTodoList = null;
                 });
-        };////////////////////////////////////////////////////
+        };
 
         $scope.revertEdits = function (todoList) {
             todoLists[todoLists.indexOf(todoList)] = $scope.originalTodoList;

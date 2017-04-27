@@ -12,3 +12,10 @@ C:\Users\WorkPC\My\MyPROJECTS\todo\Angular\Todo\Todo.Models\bin\Debug\Newtonsoft
 C:\Users\WorkPC\My\MyPROJECTS\todo\Angular\Todo\Todo.Models\obj\Debug\Todo.Models.dll
 C:\Users\WorkPC\My\MyPROJECTS\todo\Angular\Todo\Todo.Models\obj\Debug\Todo.Models.pdb
 C:\Users\WorkPC\My\MyPROJECTS\todo\Angular\Todo\Todo.Models\obj\Debug\Todo.Models.csprojResolveAssemblyReference.cache
+C:\Users\WorkPC\My\MyPROJECTS\todo-workdo\Angular.Net\Todo\Todo.Models\bin\Debug\Todo.Models.dll
+C:\Users\WorkPC\My\MyPROJECTS\todo-workdo\Angular.Net\Todo\Todo.Models\bin\Debug\Todo.Models.pdb
+C:\Users\WorkPC\My\MyPROJECTS\todo-workdo\Angular.Net\Todo\Todo.Models\bin\Debug\Newtonsoft.Json.dll
+C:\Users\WorkPC\My\MyPROJECTS\todo-workdo\Angular.Net\Todo\Todo.Models\bin\Debug\Newtonsoft.Json.xml
+C:\Users\WorkPC\My\MyPROJECTS\todo-workdo\Angular.Net\Todo\Todo.Models\obj\Debug\Todo.Models.csprojResolveAssemblyReference.cache
+C:\Users\WorkPC\My\MyPROJECTS\todo-workdo\Angular.Net\Todo\Todo.Models\obj\Debug\Todo.Models.dll
+C:\Users\WorkPC\My\MyPROJECTS\todo-workdo\Angular.Net\Todo\Todo.Models\obj\Debug\Todo.Models.pdb

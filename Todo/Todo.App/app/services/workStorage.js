@@ -17,7 +17,7 @@ angular.module('todomvc')
         var store = {
             workList: {},
 
-            api: $resource('/api/works/:id', null,
+            api: $resource('/api/workitems/:id', null,
                 {
                     save: { method: 'POST' },
                     update: { method: 'PUT' },
@@ -63,17 +63,24 @@ angular.module('todomvc')
             },
 
             get: function (id) {
-                return store.listApi.get({ id: id }, function (resp) {
+
+                var x1 = function (resp) {
                     angular.copy(resp, store.workList);
-                },
-                function (error) { })
+                };
+
+                return store.listApi.get({ id: id },
+
+                   x1,
+                    function (error) {
+                        var x;
+                    })
                 .$promise;
             },
 
             insert: function (work) {
                 var originalWorks = store.workList.works.slice(0);
 
-                return store.api.save(work,
+                var temp =  store.api.save(work,
                     function success(resp) {
                         work.id = resp.id;
                         store.workList.works.push(work);
@@ -81,6 +88,9 @@ angular.module('todomvc')
                         angular.copy(originalWorks, store.workList.works);
                     })
                     .$promise;
+
+                
+                return temp;
             },
 
             put: function (work) {

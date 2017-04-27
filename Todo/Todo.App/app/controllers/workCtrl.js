@@ -5,9 +5,7 @@
 
             'use strict';
 
-            var workLists = $scope.workLists = store.workLists;
-
-
+            var workList = $scope.workList = store.workList;
 
             $scope.newWork = '';
             $scope.editedWork = null;

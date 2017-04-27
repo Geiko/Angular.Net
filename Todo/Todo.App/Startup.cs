@@ -76,10 +76,10 @@ namespace Todo.App
                 constraints: new { controller = "WorkLists" }
             );
             config.Routes.MapHttpRoute(
-                name: "WorksApi",
-                routeTemplate: "api/works/{id}",
-                defaults: new { controller = "Works", id = RouteParameter.Optional },
-                constraints: new { controller = "Works" }
+                name: "WorkItemsApi",
+                routeTemplate: "api/workitems/{id}",
+                defaults: new { controller = "WorkItems", id = RouteParameter.Optional },
+                constraints: new { controller = "WorkItems" }
             );
             /////////////////////////////////
 

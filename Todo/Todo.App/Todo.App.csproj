@@ -144,7 +144,7 @@
     <Content Include="app\controllers\workListsCtrl.js" />
     <Content Include="app\services\workListsStorage.js" />
     <Content Include="app\services\workStorage.js" />
-    <Content Include="app\templates\hello.html" />
+    <Content Include="app\templates\options.html" />
     <Content Include="app\templates\work-lists.html" />
     <Content Include="app\templates\works.html" />
     <Content Include="Content\css\index.css" />

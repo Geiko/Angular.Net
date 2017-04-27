@@ -13,9 +13,9 @@ angular.module('todomvc', ['ui.router', 'ngResource'])
         'use strict';
         $urlRouterProvider.otherwise('/');
         $stateProvider
-            .state('hello', {
+            .state('options', {
                 url: '/',
-                template: require('./templates/hello.html')  
+                template: require('./templates/options.html')  
             })
             .state('workLists', {
                 url: '/work-lists',
@@ -28,21 +28,6 @@ angular.module('todomvc', ['ui.router', 'ngResource'])
                     }]
                 }
             })
-            .state('workLists.works', {
-                url: 'work-lists/:id/:status',
-                template: require('./templates/works.html'),
-                controller: 'WorkCtrl',
-                resolve: {
-                    store: ['workStorage', '$stateParams', function (workStorage, $stateParams) {
-                        return workStorage.then(function (module) {
-                            return module.get($stateParams.id).then(function (workModule) {
-                                return module;
-                            });
-                        });
-                    }]
-                }
-            })
-
 
 
             .state('todoLists', {
@@ -64,6 +49,21 @@ angular.module('todomvc', ['ui.router', 'ngResource'])
                     store: ['todoStorage','$stateParams', function (todoStorage, $stateParams) {
                         return todoStorage.then(function (module) {
                             return module.get($stateParams.id).then(function (todoModule) {
+                                return module;
+                            });
+                        });
+                    }]
+                }
+            })
+
+            .state('workLists.works', {
+                url: 'work-lists/:id/:status',
+                template: require('./templates/works.html'),
+                controller: 'WorkCtrl',
+                resolve: {
+                    store: ['workStorage', '$stateParams', function (workStorage, $stateParams) {
+                        return workStorage.then(function (module) {
+                            return module.get($stateParams.id).then(function (workModule) {
                                 return module;
                             });
                         });
