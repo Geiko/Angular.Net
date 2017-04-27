@@ -1,0 +1,27 @@
+﻿<section class="todoapp todo-lists">
+    <header class="header">
+        <h1>todo lists</h1>
+        <form class="todo-form" ng-submit="addTodoList()">
+            <input class="new-todo" placeholder="How todo list should be named?" ng-model="newTodoList" ng-disabled="saving" autofocus>
+        </form>
+    </header>
+    <section class="main" ng-show="todoLists.length" ng-cloak>
+        <ul class="todo-list">
+            <li ui-sref-active="active" ng-repeat="todoList in todoLists | filter:statusFilter track by $index" ng-class="{ editing: todoList == editedTodoList}">
+                <!--<a ui-sref="todoLists.todos({id:todoList.id})">
+                    <label ng-dblclick="editTodoList(todoList)">{{todoList.title}}</label>
+                </a>-->
+                <div class="view" ui-sref="todoLists.todos({id:todoList.id})">
+                    <label ng-dblclick="editTodoList(todoList)">{{todoList.title}}</label>
+                    <button class="destroy" ng-click="removeTodoList(todoList)"></button>
+                </div>
+                <form ng-submit="saveEdits(todoList, 'submit')">
+                    <input class="edit" ng-trim="false" ng-model="todoList.title" todo-escape="revertEdits(todoList)" ng-blur="saveEdits(todoList, 'blur')"
+                           todo-focus="todoList == editedTodoList">
+                </form>
+            </li>
+        </ul>
+    </section>
+</section>
+
+<div ui-view="" class="todos"></div>

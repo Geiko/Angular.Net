@@ -1,0 +1,28 @@
+{
+  "name": "TodoApp",
+  "version": "0.1.0",
+  "description": "Todo application",
+  "main": "server/app.js",
+  "private": true,
+  "engines": {
+    "node": "5.7.0"
+  },
+  "scripts": {
+    "test": "karma start test/config/karma.conf.js"
+  },
+  "dependencies": {
+    "express": "4.14.0",
+    "mongoose"   : "4.7.7",
+    "body-parser": "1.15.2",
+    "method-override": "2.3.7",
+    "socket.io": "1.7.2"
+  },
+  "devDependencies": {
+    "jasmine-core": "2.4.1",
+    "karma": "0.13.21",
+    "karma-chrome-launcher": "0.2.2",
+    "karma-firefox-launcher": "0.1.7",
+    "karma-jasmine": "0.2.2",
+    "karma-jasmine-html-reporter": "0.2.0"
+  }
+}

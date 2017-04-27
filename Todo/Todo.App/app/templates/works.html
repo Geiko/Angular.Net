@@ -1,0 +1,44 @@
+﻿
+<section class="todoapp">
+    <header class="header">
+        <h1>works</h1>
+        <form class="todo-form" ng-submit="addWork()">
+            <input class="new-todo" placeholder="What needs to be done?" ng-model="newWork" ng-disabled="saving" autofocus>
+        </form>
+    </header>
+    <section class="main" ng-show="workList.works.length" ng-cloak>
+        <input class="toggle-all" type="checkbox" ng-model="allChecked" ng-click="markAll(allChecked)">
+        <label for="toggle-all">Mark all as complete</label>
+        <ul class="todo-list">
+            <li ng-repeat="work in workList.works | filter:statusFilter track by $index" ng-class="{completed: work.completed, editing: work == editedWork}">
+                <div class="view">
+                    <input class="toggle" type="checkbox" ng-model="work.completed" ng-change="toggleCompleted(work)">
+                    <label ng-dblclick="editWork(work)">{{work.title}}</label>
+                    <button class="destroy" ng-click="removeWork(work)"></button>
+                </div>
+                <form ng-submit="saveEdits(work, 'submit')">
+                    <input class="edit" ng-trim="false" ng-model="work.title" work-escape="revertEdits(work)" ng-blur="saveEdits(work, 'blur')"
+                           work-focus="work == editedWork">
+                </form>
+            </li>
+        </ul>
+    </section>
+    <footer class="footer" ng-show="todoList.todos.length" ng-cloak>
+        <span class="todo-count">
+            <strong>{{remainingCount}}</strong>
+            <ng-pluralize count="remainingCount" when="{ one: 'item left', other: 'items left' }"></ng-pluralize>
+        </span>
+        <ul class="filters">
+            <li>
+                <a ng-class="{selected: status == ''} " ui-sref="todoLists.todos({id:todoList.id, status: null})">All</a>
+            </li>
+            <li>
+                <a ng-class="{selected: status == 'active'}" ui-sref="todoLists.todos({id:todoList.id, status: 'active'})">Active</a>
+            </li>
+            <li>
+                <a ng-class="{selected: status == 'completed'}" ui-sref="todoLists.todos({id:todoList.id, status: 'completed'})">Completed</a>
+            </li>
+        </ul>
+        <button class="clear-completed" ng-click="clearCompletedTodos()" ng-show="completedCount">Clear completed</button>
+    </footer>
+</section>

@@ -1,0 +1,28 @@
+﻿<section class="todoapp todo-lists">
+
+    <header class="header">
+        <h1>work lists</h1>
+        <form class="todo-form" ng-submit="addWorkList()">
+            <input class="new-todo" placeholder="How work list should be named?" ng-model="newWorkList" ng-disabled="saving" autofocus>
+        </form>
+    </header>
+
+    <section class="main" ng-show="workLists.length" ng-cloak>
+        <ul class="todo-list">
+            <li ui-sref-active="active" ng-repeat="workList in workLists | filter:statusFilter track by $index" ng-class="{ editing: workList == editedWorkList}"> 
+
+
+                <div class="view" ui-sref="workLists.works({id:workList.id})">
+                    <label ng-dblclick="editWorkList(workList)">{{workList.title}}</label>
+                    <button class="destroy" ng-click="removeWorkList(workList)"></button>
+                </div>
+
+                <form ng-submit="saveEdits(workList, 'submit')">
+                    <input class="edit" ng-trim="false" ng-model="workList.title" work-escape="revertEdits(workList)" ng-blur="saveEdits(workList, 'blur')"
+                           work-focus="workList == editedWorkList">
+                </form>
+            </li>
+        </ul>
+    </section>
+
+</section>
