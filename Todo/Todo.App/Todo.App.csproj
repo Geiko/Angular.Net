@@ -140,8 +140,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\controllers\titleMirrorCtrl.js" />
     <Content Include="app\controllers\workCtrl.js" />
     <Content Include="app\controllers\workListsCtrl.js" />
+    <Content Include="app\directives\titleMirror.js" />
     <Content Include="app\services\workListsStorage.js" />
     <Content Include="app\services\workStorage.js" />
     <Content Include="app\templates\options.html" />

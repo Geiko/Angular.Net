@@ -383,3 +383,11 @@ html .clear-completed:active {
         bottom: 10px;
     }
 }
+
+.current-title {
+    font-size: 21px;
+    /*color: RGB(234, 215, 215);*/
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid RGB(234, 215, 215);
+}

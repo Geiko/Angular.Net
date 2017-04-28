@@ -75,6 +75,8 @@ angular.module('todomvc', ['ui.router', 'ngResource'])
 require('./directives/todoEscape');
 require('./directives/todoFocus');
 
+require('./directives/titleMirror');
+
 require('./services/todoListsStorage');
 require('./services/todoStorage');
 
@@ -86,3 +88,5 @@ require('./controllers/todoCtrl');
 
 require('./controllers/workListsCtrl');
 require('./controllers/workCtrl');
+
+require('./controllers/titleMirrorCtrl');

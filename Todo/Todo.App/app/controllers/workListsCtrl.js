@@ -79,7 +79,7 @@
 
         $scope.removeWorkList = function (workList) {
             store.delete(workList);
-            $state.go('^');
+            //$state.go('^');
         };
 
         $scope.saveWorkList = function (workList) {

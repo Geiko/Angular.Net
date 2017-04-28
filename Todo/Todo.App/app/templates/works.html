@@ -1,7 +1,35 @@
 ﻿
+<!--<div class="current-title" ng-controller="TitleMirrorCtrl">
+    <label> {{mirror}} </label>
+</div>-->
+<!--<div class="current-title" ng-controller="TitleMirrorCtrl">
+    <label ng-bind="mirror"></label>
+</div>
+<div class="current-title" ng-controller="TitleMirrorCtrl">
+    <label ng-model="mirror"></label>
+    <input ng-model="mirror">
+</div>-->
+
+
+
+<!--<div class="current-title" >
+    <title-mirror></title-mirror>
+</div>-->
+
+<div class="current-title"  ng-controller="TitleMirrorCtrl">
+    <label title-mirror></label>
+</div>
+
+
+ 
+
+
+
+
+
 <section class="todoapp">
     <header class="header">
-        <h1>works</h1>
+        <h1>works 1</h1>
         <form class="todo-form" ng-submit="addWork()">
             <input class="new-todo" placeholder="What needs to be done?" ng-model="newWork" ng-disabled="saving" autofocus>
         </form>
@@ -23,7 +51,7 @@
                 </div>
 
                 <form ng-submit="saveEdits(work, 'submit')">
-                    <input class="edit" ng-trim="false" ng-model="work.title" work-escape="revertEdits(work)" ng-blur="saveEdits(work, 'blur')"
+                    <input class="edit" ng-trim="false" ng-model="work.title" todo-escape="revertEdits(work)" ng-blur="saveEdits(work, 'blur')"
                            work-focus="work == editedWork">
                 </form>
             </li>

@@ -41,6 +41,7 @@
                 if (!newWork.title) {
                     return;
                 }
+                
 
                 $scope.saving = true;
                 store.insert(newWork)
@@ -53,6 +54,10 @@
             };
 
             $scope.editWork = function (work) {
+
+                $scope.newWork = '';
+
+
                 $scope.editedWork = work;
                 // Clone the original work to restore it on demand.
                 $scope.originalWork = angular.extend({}, work);
@@ -112,11 +117,11 @@
                 }
 
                 store.put(work)
-                    .then((response) => {
-                    console.log(response);
-                }).catch((error) => {
+                    .then(function (response) {
+                    //console.log(response);
+                    }).catch(function (error) {
                     work.completed = !work.completed;
-                    console.log(error);
+                    //console.log(error);
                 });
             };
 
