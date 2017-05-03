@@ -38,7 +38,6 @@ C:\Users\WorkPC\My\MyPROJECTS\todo-workdo\Angular.Net\Todo\Todo.DAL\bin\Debug\En
 C:\Users\WorkPC\My\MyPROJECTS\todo-workdo\Angular.Net\Todo\Todo.DAL\bin\Debug\Autofac.xml
 C:\Users\WorkPC\My\MyPROJECTS\todo-workdo\Angular.Net\Todo\Todo.DAL\bin\Debug\EntityFramework.xml
 C:\Users\WorkPC\My\MyPROJECTS\todo-workdo\Angular.Net\Todo\Todo.DAL\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\WorkPC\My\MyPROJECTS\todo-workdo\Angular.Net\Todo\Todo.DAL\obj\Debug\Todo.DAL.csprojResolveAssemblyReference.cache
 C:\Users\WorkPC\My\MyPROJECTS\todo-workdo\Angular.Net\Todo\Todo.DAL\obj\Debug\Todo.DAL.Migrations.AddedTodos.resources
 C:\Users\WorkPC\My\MyPROJECTS\todo-workdo\Angular.Net\Todo\Todo.DAL\obj\Debug\Todo.DAL.Migrations.AddedTodoLists.resources
 C:\Users\WorkPC\My\MyPROJECTS\todo-workdo\Angular.Net\Todo\Todo.DAL\obj\Debug\Todo.DAL.Migrations.addWorkEntities.resources

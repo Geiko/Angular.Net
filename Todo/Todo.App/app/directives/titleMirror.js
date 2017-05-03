@@ -2,9 +2,10 @@
     .directive('titleMirror', function () {
         'use script';
         
-        return  {
+        return {
 
-            template: "<span> {{newWork}} {{editedWork.title}} </span>"                         
-
+            template: require('../templates/mirror.html'),
+            controller: "TitleMirrorCtrl"   
+            
         };
     });

@@ -16,7 +16,7 @@
     <title-mirror></title-mirror>
 </div>-->
 
-<div class="current-title"  ng-controller="TitleMirrorCtrl">
+<div class="current-title">
     <label title-mirror></label>
 </div>
 
@@ -76,3 +76,21 @@
         <button class="clear-completed" ng-click="clearCompletedWorks()" ng-show="completedCount">Clear completed</button>
     </footer>
 </section>
+
+
+
+
+
+
+<!--angular.module('docsSimpleDirective', [])
+.controller('Controller', ['$scope', function($scope) {
+  $scope.customer = {
+    name: 'Naomi',
+    address: '1600 Amphitheatre'
+  };
+}])
+.directive('myCustomer', function() {
+  return {
+    template: 'Name: {{customer.name}} Address: {{customer.address}}'
+  };
+});-->

@@ -67,15 +67,20 @@ angular.module('todomvc', ['ui.router', 'ngResource'])
                                 return module;
                             });
                         });
+                    }],
+
+                    mirrorString: ['mirrorComposer', function (mirrorComposer) {
+                        return module;
                     }]
                 }
             })
+        
+
     }]    ); 
+
 
 require('./directives/todoEscape');
 require('./directives/todoFocus');
-
-require('./directives/titleMirror');
 
 require('./services/todoListsStorage');
 require('./services/todoStorage');
@@ -83,10 +88,14 @@ require('./services/todoStorage');
 require('./services/workListsStorage');
 require('./services/workStorage');
 
+
 require('./controllers/todoListsCtrl');
 require('./controllers/todoCtrl');
 
 require('./controllers/workListsCtrl');
 require('./controllers/workCtrl');
 
+
 require('./controllers/titleMirrorCtrl');
+require('./directives/titleMirror');
+require('./services/mirrorComposer');
