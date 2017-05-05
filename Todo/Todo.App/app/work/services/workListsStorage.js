@@ -1,4 +1,4 @@
-﻿angular.module('todomvc')
+﻿angular.module('work')
               
     .factory('workListsStorage', ['$resource', function ($resource) {
 
@@ -22,9 +22,7 @@
                     angular.copy(resp, store.workLists);
                 });
             },
-
-
-
+            
             insert: function (workList) {
                 var originalWorkLists = store.workLists.slice(0);
 
@@ -48,15 +46,11 @@
                         angular.copy(originalWorkList, store.workLists);
                     });
             },
-
-
-
-
+            
             put: function (workList) {
                 return store.api.update({ id: workList.id }, workList)
                     .$promise;
             }
-
         };
 
         return store;

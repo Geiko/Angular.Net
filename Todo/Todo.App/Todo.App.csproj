@@ -140,17 +140,18 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\controllers\titleMirrorCtrl.js" />
-    <Content Include="app\controllers\workCtrl.js" />
-    <Content Include="app\controllers\workListsCtrl.js" />
-    <Content Include="app\directives\titleMirror.js" />
-    <Content Include="app\services\mirrorComposer.js" />
-    <Content Include="app\services\workListsStorage.js" />
-    <Content Include="app\services\workStorage.js" />
-    <Content Include="app\templates\mirror.html" />
+    <Content Include="app\work\controllers\titleMirrorCtrl.js" />
+    <Content Include="app\work\controllers\workCtrl.js" />
+    <Content Include="app\work\controllers\workListsCtrl.js" />
+    <Content Include="app\work\directives\titleMirror.js" />
+    <Content Include="app\work\index.js" />
+    <Content Include="app\work\services\mirrorComposer.js" />
+    <Content Include="app\work\services\workListsStorage.js" />
+    <Content Include="app\work\services\workStorage.js" />
+    <Content Include="app\work\templates\mirror.html" />
     <Content Include="app\templates\options.html" />
-    <Content Include="app\templates\work-lists.html" />
-    <Content Include="app\templates\works.html" />
+    <Content Include="app\work\templates\work-lists.html" />
+    <Content Include="app\work\templates\works.html" />
     <Content Include="Content\css\index.css" />
     <Content Include="postcss.config.js" />
     <Content Include="public\index.html">

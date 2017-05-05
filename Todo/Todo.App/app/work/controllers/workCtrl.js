@@ -1,4 +1,4 @@
-﻿angular.module('todomvc')
+﻿angular.module('work')
     .controller('WorkCtrl', [
         '$scope', '$stateParams', '$state', '$filter', 'store',
         function ($scope, $stateParams, $state, $filter, store) {

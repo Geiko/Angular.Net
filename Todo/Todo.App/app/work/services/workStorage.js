@@ -7,7 +7,7 @@
  * They both follow the same API, returning promises for all changes to the
  * model.
  */
-angular.module('todomvc')
+angular.module('work')
 
 
     .factory('workStorage', ['$resource', function ($resource) {

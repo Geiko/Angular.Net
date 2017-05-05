@@ -1,4 +1,4 @@
-﻿angular.module('todomvc')
+﻿angular.module('work')
     .controller('WorkListsCtrl', [
         '$scope', '$stateParams', '$state', '$filter', 'store',
         function ($scope, $stateParams, $state, $filter, store) {
@@ -27,7 +27,7 @@
                     .finally(function () {
                         $scope.saving = false;
                     });
-            };/////////////////////
+            };
 
             $scope.editedWorkList = function (workList) {
                 $scope.editedWorkList = workList;
@@ -65,10 +65,7 @@
                 .finally(function () {
                     $scope.editedWorkList = null;
                 });
-        }//////////////////////////////////////
-
-
-
+        }
 
         $scope.revertEdits = function (workList) {
             workLists[workLists.indexOf(workList)] = $scope.originalWorkList;
